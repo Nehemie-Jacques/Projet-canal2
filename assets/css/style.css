@@ -9,65 +9,70 @@
   box-sizing: border-box;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  font-family: IBM Plex Sans", sans-serif;
+:root {
+  --primary-color:#618264;
+  --seconfary-color: #000e01;
+  --font-IBM: "IBM Plex Sans", sans-serif;
+  --font-open: "Open Sans", sans-serif;
 }
 
-body p {
-  font-family: "Open Sans", sans-serif;
+html {
+  font-size: 10px;
 }
 
 body {
-  font-family: "Poppins", serif;
-  width: 100%;
-  height: 100%;
+  font-family: var(--font-IBM);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
+
+body p {
+  font-family: var(--font-open);
+}
+
 /* !---------------------------------------------------------------- */
 /* ?section nav barre */
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem 2rem 0rem 5rem;
+  gap: 15rem;
+  padding-top: 2rem;
 }
 
-ul {
+.navbar ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
 }
 
-a {
+.navbar a {
   text-decoration: none;
-  color: #000e01;
+  color: var(--secondary-color);
   font-size: 2.4rem;
-  font-weight: 400;
 }
 
-a:hover {
-  color: #618264;
+.navbar a:hover {
+  color: var(--primary-color)
   text-decoration: underline;
 }
 
-button {
-  width: 15rem;
-  height: 5rem;
+.navbar button {
+  padding: 2rem 4rem;
   border-radius: 5rem;
-  background: #618264;
-  border-color: #618264;
+  background:   var(--primary-color);
+  border-color: var(--primary-color);
   color: white;
 }
 
-button:hover {
+.navbar button:hover {
   background: #0d5313;
   transition: all 500ms ease;
-  box-shadow: 0.3rem 0.3rem 0.3rem rgb(26, 25, 25);
+  box-shadow:.3rem.3rem.3rem rgb(26, 25, 25);
   color: #d1e7fc;
 }
 
@@ -77,8 +82,9 @@ button:hover {
 .first-container {
   display: flex;
   justify-content: space-between;
+  align-items: start;
   gap: 5rem;
-  padding: 1rem 2rem 0rem 5rem;
+  padding: 0 2rem 0 5rem;
 }
 
 .Nganou {
@@ -93,6 +99,7 @@ button:hover {
 .background-img>img {
   width: 70rem;
   height: 73rem;
+
 }
 
 .title {
@@ -105,7 +112,7 @@ button:hover {
 .barre-verte {
   height: 4.5rem;
   width: 1rem;
-  background-color: #618264;
+  background-color: var(--primary-color);
   font-weight: 600;
   font-size: 2rem;
   border-radius: 2rem;
@@ -132,7 +139,6 @@ button:hover {
 
 .text-img>p {
     font-size: 1.4rem;
-    font-weight: 400;
 }
 h2 {
     font-size: 2rem;
@@ -154,11 +160,11 @@ h2 {
 }
 
 .texte>p {
-    font-family: Inter;
+    font-family: var(--font-IBM);
 font-size: 13px;
 font-style: italic;
 font-weight: 400;
-color: #618264;
+color: var(--primary-color);
 }
 
 .texte>h1 {
@@ -188,7 +194,7 @@ color: #618264;
   text-align: center;
   font-weight: 500;
   font-size: 4rem;
-  color:#000e01;
+  color:var(--secondary-color);
   padding-bottom: 4rem;
 }
 
@@ -233,13 +239,13 @@ color: #618264;
 .text-canalmatin>h1 {
   font-weight: 500;
   font-size: 4.5rem;
-  color: #618264;
+  color: var(--primary-color);
 }
 
 .text-canalmatin>p {
   font-weight: 400;
   font-size: 2.4rem;
-  color: #000e01;
+  color: var(--secondary-color);
   opacity: 84%;
 }
 
@@ -290,7 +296,7 @@ color: #618264;
 
 footer {
   background: #79AC78;
-  height: 35rem;
+  /* height: 35rem; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -337,14 +343,14 @@ footer {
 .pub>h1 {
   font-weight: 600;
   font-size: 4rem;
-  color: #618264;
+  color: var(--primary-color);
   
 }
 
 .barre-verte2 {
   height: 4.5rem;
   width: 1rem;
-  background-color: #618264;
+  background-color: var(--primary-color);
   font-weight: 600;
   font-size: 2rem;
 }
@@ -387,7 +393,7 @@ padding: 10rem 0rem 10rem 0rem;
 .femme>h1 {
   font-size: 2.4rem;
   font-weight: 500;
-  color: #000e01;
+  color: var(--secondary-color);
 }
 
 /* !------------------------------------------------------------------------------------------------------------------- */
@@ -406,7 +412,7 @@ padding: 10rem 0rem 10rem 0rem;
 .comment-text>p {
   font-weight: 400;
   font-size: 2.4rem;
-  color: #000e01;
+  color: var(--secondary-color);
   opacity: 84%;
 }
 
